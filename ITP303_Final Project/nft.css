@@ -1,0 +1,181 @@
+/* ---- START MOBILE STYLES (0px - 767px)---- */
+
+/* # = ID */
+/* . = class */
+
+/* Navigation Bar */
+#navbar {
+    padding-left: 2%;
+    padding-right: 2%;
+    background-image: linear-gradient(to bottom right, red, blue);  
+}
+
+#navbar .nav-item .nav-link {
+    color: white;
+    border-radius: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+#navbar .nav-item .active {
+    background-color: white;
+    color: blue;
+    color: rgb(101, 0, 121);
+    border-radius: 10px;
+}
+
+#navbar img {
+    width: 20%;
+    margin-right: 25px;
+    min-width: 200px;
+}
+
+/* Navigation Bar Mobile */
+#nav {
+    background-color: lightskyblue;
+}
+
+.navbar-light .navbar-brand {
+    color: darkblue;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: darkblue;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+    color: purple;
+}
+
+/* Search Wallet Address */
+#wallet-search-form {
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    color: white;
+    overflow: auto;
+    
+}
+
+/* Body Section of NFTs */
+#body-section {
+    color: white;
+}
+
+
+#nfts-section {
+    display: flex;
+    margin: 0 auto;
+}
+
+.nft-col {
+    margin-top: 4%;
+    margin-bottom: 4%;
+    padding-top: 8%;
+    padding-bottom: 8%;
+    background-image: linear-gradient(to bottom right, rgba(255, 0, 0, 0.2), rgba(0, 0, 255, 0.2));
+    border-radius: 25px;
+    border: 1px solid purple;
+}
+
+.nft-title {
+    width: 80%; 
+    margin-right: 10%; 
+    margin-left: 10%;
+    text-align: center;
+}
+
+.nft-info {
+    width: 80%; 
+    margin-right: 10%; 
+    margin-left: 10%;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.nft-img {
+    width: 80%; 
+    margin-right: 10%; 
+    margin-left: 10%;  
+}
+
+/* Save NFT button */
+.btn {
+    margin: 0 auto;
+    display: block;
+    margin-top: 2.5%;
+    width: 80%;
+    padding: 1%;
+    background-color: purple;
+    border-radius: 10px;
+    font-size: 18px;
+    color: white;
+}
+
+.btn:hover {
+    background-color: aliceblue;
+    color: purple;
+}
+
+/* Create NFT CSS */
+/* Need to seperate out the CSS files */
+
+.confirmation.container {
+    height: 100vh;
+}
+
+.container {
+    color: white;
+}
+
+.row {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#nft-traits {
+    padding-left: 25%;
+}
+
+#nft-traits .col-sm-9 {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+
+
+/* ---- END MOBILE STYLES ---- */
+
+/* -- Media queries to add CSS for bigger screens -- */
+/* iPad vertical is 768px. Media query set for screens >=768px  */
+@media (min-width: 768px) {
+
+    /* Search Wallet Address */
+    #wallet-search-form {
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        color: white;
+        overflow: auto;
+        
+    }
+
+    
+}
+/* Small desktop starts at 992px. Media query set for screens >=992px */
+@media (min-width: 992px) {
+
+    /* Search Wallet Address */
+    #wallet-search-form {
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-top: 10%;
+        padding-bottom: 10%;
+        color: white;
+        overflow: auto;
+        
+    }
+   
+}

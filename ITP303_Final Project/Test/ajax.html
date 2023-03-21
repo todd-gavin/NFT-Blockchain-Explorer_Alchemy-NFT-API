@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Alchemy NFT API - JSON GET</h1>
+    <div id="output"></div>
+    <!-- <script src="fetch_script.js"></script> -->
+    <script>
+        // alchemy-nft-api/fetch-script.js
+        // import fetch from 'node-fetch';
+
+        // Setup request options:
+        var requestOptions = {
+        method: 'GET',
+        redirect: 'follow'
+        };
+
+        // Replace with your Alchemy API key:
+        const apiKey = "wfH80GCf0aIUA5EHXdHEKur9ZhofUUWG";
+        // https://eth-mainnet.alchemyapi.io/v2/wfH80GCf0aIUA5EHXdHEKur9ZhofUUWG
+        const baseURL = `https://eth-mainnet.alchemyapi.io/v2/${apiKey}/getNFTs/`;
+        // Replace with the wallet address you want to query:
+        const ownerAddr = "0xF5FFF32CF83A1A614e15F25Ce55B0c0A6b5F8F2c";
+        // const ownerAddr = "0xF5FFF32CF83A1A614e15F25Ce55B0c0A6b5F8F2c";
+        // const ownerAddr = "0xC33881b8FD07d71098b440fA8A3797886D831061";
+        const fetchURL = `${baseURL}?owner=${ownerAddr}`;
+
+        // let resultsJS = JSON.parse(resultsString);
+        // console.log(resultsJS);
+
+
+        // Make the request and print the formatted response:
+        fetch(fetchURL, requestOptions)
+        // .then(response => { 
+        //     response.json(), // Converts to JSON object
+        //     //console.log(response.ownedNfts[6].title) // @ TA - THIS DOES NOT WORK - returns 'undefined'
+        //     console.log("Entire Response "),
+        //     console.log(response)
+        // })
+
+        .then(response => response.json())
+
+        // .then(response => JSON.parse(response))
+        // .then(response => JSON.stringify(response, null, 2))
+        // .then(response => {
+        //     JSON.parse(response),
+        //     console.log("Response: ");
+        //     console.log(response)
+        // })
+        .then(result => {
+            // let singleNFT = '<h2>Single NFT</h2>';
+            // result.forEach(function(post) {
+            //     singleNFT += `
+            //     <div>
+            //         <h3>${post.title}</h3>
+            //         <p>${post.description}</p>
+            //     </div>
+            //     `;
+            // });
+            // document.getElementById('output').innerHTML = singleNFT;
+            console.log("Result Response:"),
+            console.log(result)
+            // console.log(result[0]) // @ TA - THIS DOES NOT WORK - returns 'undefined'
+            // displayResults(result)
+        })
+        .catch(error => {
+            console.log("Error: ");
+            console.log('error' + error)
+        });
+
+        //https://www.youtube.com/watch?v=cuEtnrL9-H0&t=43s
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        function displayResults(response) {
+            // This function will actually display the results
+
+            // Convert the JSON string into JS objects
+            // let resultsJS = JSON.parse(resultsString);
+            // console.log(resultsJS);
+
+            console.log("...log 1...");
+
+            // Clear the previous results
+            //document.querySelector("tbody").replaceChildren();
+
+            // For every result that itunes gave us, we will create a table row
+            for(let i = 0; i < response.results.length; i++) {
+
+                console.log("...loging...");
+
+                let htmlString = `
+                <tr>
+                    <td>
+                        <img src="${response.results[i].title}">
+                    </td>
+                    <td>
+                        ${response.results[i].description}
+                    </td>
+                </tr>
+                `;
+
+                // Add this <tr> to the <table>
+                // document.querySelector("tbody").innerHTML += htmlString;
+                document.getElementById('output').innerHTML = htmlString;
+            }
+        }
+
+    </script>
+</body>
+</html>
