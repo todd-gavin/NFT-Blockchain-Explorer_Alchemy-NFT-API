@@ -2,6 +2,8 @@
 
 NFT Wallet Blockchain Explorer built for NFT and crypto enthusiasts.
 
+Project was developed in April-May of 2022.
+
 ### Project Summary
 This web app is a blockchain explorer for NFTs in wallets on the Ethereum mainnet (ERC721 and ERC1155 Token NFTs). This website allows the user to enter an Ethereum wallet address and retrieve all of the Ethereum NFTs (metadata) in that specific wallet using a FETCH request to Alchmey’s NFT API. Additonally, this web app supports CRUD functionality for NFTs where users can create NFTs, can edit NFTs, can delete NFTs, and can view the NFTs that they create from the SQL database. The front-end is built with bootstraps UI library.
 
