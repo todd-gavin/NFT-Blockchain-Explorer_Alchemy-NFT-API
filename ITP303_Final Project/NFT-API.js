@@ -5,7 +5,7 @@ redirect: 'follow'
 };
 
 // Replace with your Alchemy API key:
-const apiKey = "wfH80GCf0aIUA5EHXdHEKur9ZhofUUWG";
+const apiKey = "XXXXXXXXXXXXXXXXXXXXXXXX";
 
 // https://eth-mainnet.alchemyapi.io/v2/wfH80GCf0aIUA5EHXdHEKur9ZhofUUWG
 const baseURL = `https://eth-mainnet.alchemyapi.io/v2/${apiKey}/getNFTs/`;
